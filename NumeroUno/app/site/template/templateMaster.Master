@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="templateMaster.master.cs" Inherits="NumeroUno.app.site.template.templateMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Numero-Uno</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <a href="../home.aspx">../home.aspx</a>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="../site/home.aspx">NumeroUno</a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="../site/home.aspx">HOME</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../site/registrar.aspx">RGISTRAR/EDITAR</a>
+    </li>
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        LISTAR
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="../site/ListarEmpleado.aspx">LISTAR TODOS LOS EMPLEADOS</a>
+        <a class="dropdown-item" href="../site/listarRemuneracion.aspx">LISTAR EMPLEADOS POR REMUNERACION BRUTA</a>
+        <a class="dropdown-item" href="../site/listarFecha.aspx">LISTAR EMPLEADOS POR FECHA DE NACIMINETO</a>
+        <a class="dropdown-item" href="../site/listarMayor.aspx">LISTAR EMPLEADOS CON MAYOR REMUNERACION</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+<br>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
