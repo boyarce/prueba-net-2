@@ -42,11 +42,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dao\EmpleadoDAO.cs" />
+    <Compile Include="dao\entity\EmpleadoEntity.cs" />
+    <Compile Include="dao\entity\TipoEmpleadoEntity.cs" />
+    <Compile Include="dao\impl\EmpleadoDAOImpl.cs" />
+    <Compile Include="dao\TipoEmpleadoDAO.cs" />
+    <Compile Include="NUMEROUNODataSet.cs">
+      <DependentUpon>NUMEROUNODataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NUMEROUNODataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NUMEROUNODataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="NUMEROUNODataSet.xsc">
+      <DependentUpon>NUMEROUNODataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NUMEROUNODataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NUMEROUNODataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NUMEROUNODataSet.xss">
+      <DependentUpon>NUMEROUNODataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
